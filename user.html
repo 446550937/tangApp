@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/user.css">
+	<title>用户中心</title>
+</head>
+<body>
+	<div class="cont">
+		<header class="head">
+			<button class="btn login">
+				登录/注册
+			</button>
+			<img src="images/4_07.png" class="icon login">
+			<img src="images/4_03.png" class="car login">
+		</header>
+		<nav class="nav">
+			<ul>
+				<li class="login">我的商品</li>
+				<li class="login">我的关注</li>
+			</ul>
+			<div class="line"></div>
+		</nav>
+		<section class="sec">
+			<ul class="list1">
+				<li class="mydd">
+					<img src="images/4_11.png"  class="dd">
+					<span class="dd_txt login">
+						我的订单
+					</span>
+					<span class="qbdd_txt login">
+						查看全部订单 >
+					</span>
+				</li>
+				<ul class="li">
+					<li class="login">
+						<img src="images/4_15.png">
+						<a href="">待付款</a>
+					</li>
+					<li class="login">
+						<img src="images/4_17.png">
+						<a href="">包裹物流</a>
+					</li>
+					<li class="login">
+						<img src="images/4_19.png">
+						<a href="">待评价</a>
+					</li>
+					<li class="login">
+						<img src="images/4_21.png">
+						<a href="">退换货</a>
+					</li>
+				</ul>
+			</ul>
+			<ul class="list2">
+				<li class="login">
+					<img src="images/4_27.png"  class="con">
+					<span class="txt">
+						我的评价
+					</span>
+					<span class="jian">
+						>
+					</span>
+				</li>
+				<li class="login">
+					<img src="images/4_30.png"  class="con">
+					<span class="txt">
+						我的代金券
+					</span>
+					<span class="jian">
+						>
+					</span>
+				</li>
+				<li class="login">
+					<img src="images/4_32.png"  class="con">
+					<span class="txt">
+						分享有礼
+						<span class="new">
+							new
+						</span>
+					</span>
+					<span class="jian">
+						>
+					</span>
+				</li>
+			</ul>
+			<ul class="list3">
+				<li class="login">
+					<img src="images/4_02.png"  class="con">
+					<span class="txt">
+						账户设置
+					</span>
+					<span class="jian">
+						>
+					</span>
+				</li>
+				<li class="lxkf">
+					<img src="images/4_06.png"  class="con">
+					<span class="txt">
+						联系客服
+					</span>
+					<span class="jian">
+						400-079-6990 >
+					</span>
+				</li>
+				<li>
+					<img src="images/4_08.png"  class="con">
+					<span class="txt">
+						帮助中心
+					</span>
+					<span class="jian">
+						>
+					</span>
+				</li>
+				<li>
+					<img src="images/4_10.png"  class="con">
+					<span class="txt">
+						意见反馈
+					</span>
+					<span class="jian">
+						>
+					</span>
+				</li>
+				<li class="qchc">
+					<img src="images/4_12.png"  class="con">
+					<span class="txt">
+						清除缓存
+					</span>
+					<span class="jian">
+						>
+					</span>
+				</li>
+				<li>
+					<img src="images/4_14.png"  class="con">
+					<span class="txt">
+						消息推送
+					</span>
+					<div class="btn1">
+						<span class="an" data='1'>
+						</span>
+					</div>
+				</li>
+			</ul>
+		</section>
+	</div>
+	<script src="lib/setfontsize.js"></script>
+	<script src="./lib/zepto.min.js"></script>
+	<script src="lib/jquery.min.js"></script>
+    <script src='./lib/lizi.js'></script>
+	<script>
+		;(function(){
+			function btn(){
+				$(".an").on("click",function(){
+					var data = $(".an").attr("data");
+					if(data == 1){
+						$(this).attr('data', 0);
+						$('.btn1').css({
+							"background":"#e32356"
+						})
+						$(".an").css({
+							"left":"0.36rem"
+						})
+					}
+					else{
+						$(this).attr('data', 1);
+						$('.btn1').css({
+							"background":"#ddd"
+						})
+						$(".an").css({
+							"left":"0.02rem"
+						})
+					}
+				})
+			}
+			btn();
+			function login(){
+				
+			}
+			$(".lxkf").on("click",function(){
+				var dialog = new Dialog({
+		            content: '400-079-6990',
+		            closeBtn : true,
+		            buttons : ({
+		                '取消' : function(){
+		                    
+		                },
+		                '拨打' : function(){
+		                   
+		                }
+		            })
+		        })
+			})
+			$(".qchc").on("click",function(){
+				var dialog = new Dialog({
+		            content: '清楚缓存',
+		            closeBtn : true,
+		            buttons : ({
+		                '取消' : function(){
+		                    
+		                },
+		                '确认' : function(){
+		                   
+		                }
+		            })
+		        })
+			})
+		})(jQuery)
+	</script>
+</body>
+</html>
